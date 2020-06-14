@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge chrome'>
+    <title>%%님의 이동경로</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta http-equiv="Pragma" content="no-cache"> <!-- ← HTTP 1.0에서 사용하던 방법 -->
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0"/>
+    <link rel='stylesheet' type='text/css' href='css/mobile.css'>
+      
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2e485ebe6aebf1c80b1f18125bbea3cd&libraries=clusterer,services,drawing"></script>
+    <script type="text/javascript" src="js/red.js"></script>
+
+</head>
+<body>
+   <div id="actionBar">
+       <img src="app_icon.png" style="width:36px;height:36px;z-index:5;"></img>
+       <div style="color:white; margin:0 20%;z-index: 5;">PocketPolice</div>
+       <img id="shareBtnMobile" src="share_icon.png" style="width:24px;height:24px;z-index: 5;"></img>
+       <div id="bactionBar"style="z-index:3"></div>
+   </div>
+    <div id="flex">
+        <div id="notification">모바일버전이래용</div>
+        <div id="map_wrapper">
+            <div id="map" style="width:100vw;height:90vh;float:top;"></div>
+        </div>
+
+        <div id="nav">
+            <ol>
+                <div class="box">
+                    <li class="title">출발지점</li>
+                    <li class="address">충청북도 청주시 ㅇㅇ동 ㅇㅇㅇ</li>
+                    <li class="clock">00:00:00</li>
+                </div>
+                <div class="box">
+                    <li class="title">신고지점</li>
+                    <li class="address">충청북도 청주시 ㅇㅇ동 ㅇㅇㅇ</li>
+                    <li class="clock">00:00:00</li>
+                </div>
+                <div class="box">
+                    <li class="title">현재지점</li>
+                    <li class="address">충청북도 청주시 ㅇㅇ동 ㅇㅇㅇ</li>
+                    <li class="clock">00:00:00</li>
+             </div>
+            </ol>
+        </div>
+    </div>
+    <div id="set" class="off">
+        <div id="shareBox">
+            <div style="border-bottom:1px solid lightgray;">네이버 지도에서 현재 위치 열기</div>
+            <div style="border-bottom:1px solid lightgray">카카오 지도에서 현재 위치 열기</div>
+            <div style="border-bottom:1px solid lightgray;">url 공유하기</div>
+            <div id="cancleBtn" style="color:#FF7474">취소</div>
+        </div>
+    </div>
+
+    <script src='js/mobile.js'></script>
+
+    <script src='js/marker.js'></script>
+
+    <script src='js/code.js'></script>
+
+
+
+</body>
+</html>
