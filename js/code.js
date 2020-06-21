@@ -37,36 +37,32 @@ var presentSet = function(result,status){
 }//현재 위치 밑에 있는 주소랑 시간 실시간 반영
 
 
-
 //날짜 구하기
 let today=new Date();
 let dayCheck=`${today.getFullYear()}-0${today.getMonth()+1}-${today.getDate()}`;
-console.log("날짜체크",dayCheck);
-var id=database.ref('GPS/'+uid+'/'+dayCheck);//나중에 daycheck로 바꿔주세용~~
-//값 변할 때 마다 여기 들어옴!
+var id=database.ref('GPS/'+uid+'/'+dayCheck);
 id.on('value',function(snapshot){
     console.log("변화감지");
     tmpCnt=0;
-    for(var i in snapshot.val()){//이거 실행될때면 처음부터 전부 다...하는 거구낭!
+    console.log(snapshot.val())
+    for(var i in snapshot.val()){
         if(tmpCnt<linePath.length-1){
             console.log(tmpCnt,linePath.length-1);
             tmpCnt++;
             continue;
         }
         console.log(tmpCnt);
-        var childKey=snapshot.child(`GPS/${uid}/${dayCheck}/${i}`).key;//여기도 daycheck로
-        database.ref(`GPS/${uid}/${dayCheck}/${i}`).once('value').then(function(snapshot){//여기도 daycheck
-            toMap(Object.values(snapshot.val())[0],Object.keys(snapshot.val())[0]);//
+        var childKey=snapshot.child(`GPS/${uid}/${dayCheck}/${i}`).key;
+        console.log(childKey);
+        database.ref(`GPS/${uid}/${dayCheck}/${i}`).once('value').then(function(snapshot){
+            toMap(Object.values(snapshot.val())[0],Object.keys(snapshot.val())[0]);
             geocoder.coord2Address(linePath[linePath.length-1].getLng(), linePath[linePath.length-1].getLat(), presentSet);
 
-        //경로 배열에 넣어주고, 이동 경로 표시해주는 함수
-            //console.log(linePath[linePath.length-1].getLng(),linePath[linePath.length-1].getLat());
         });
         tmpCnt++;
     }
     setTimeout(function(){markerNew();},500);
-    if(onCnt==true){//처음 한번만 실행되게!
-        //여기에서 출발지점. 신고지점 넣어주기. 데이터베이스에 쌓였던 값들이니까. 
+    if(onCnt==true){
         setTimeout(function(){
             console.log(linePath);
             geocoder.coord2Address(linePath[0].getLng(),linePath[0].getLat(),function(result,status){
@@ -74,14 +70,14 @@ id.on('value',function(snapshot){
                     startAddress[0].innerHTML=result[0].address.address_name;
                     startTime[0].innerHTML=time[0];
                 }
-            });//출발지점 바꿔줌
+            });
             geocoder.coord2Address(linePath[linePath.length-1].getLng(), linePath[linePath.length-1].getLat(), function(result,status){
                 if(status === kakao.maps.services.Status.OK){
                     startAddress[1].innerHTML=result[0].address.address_name;
                     startTime[1].innerHTML=time[time.length-1];
                 }
-            });//중간지점~}
-            markerInit();//처음 끝만!
+            });
+            markerInit();
             onCnt=false;
         },1000);
     }
@@ -99,7 +95,7 @@ function toMap(lat,t){
     linePath.push(new kakao.maps.LatLng(b,c));
    /*var polyline = new kakao.maps.Polyline({
         path: linePath, // 선을 구성하는 좌표배열 입니다
-        strokeWeight: 6, // 선의 두께 입니다
+        strokeWeiSght: 6, // 선의 두께 입니다
         strokeColor: '#ff0000', // 선의 색깔입니다
         strokeOpacity: 0.7, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
         strokeStyle: 'solid' // 선의 스타일입니다

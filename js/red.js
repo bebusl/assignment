@@ -61,30 +61,31 @@ function checkId(){//name이랑 uid랑 맞나 확인!
     uid=returnValue[0];
     name=returnValue[1];//파라미터 입력할 땐 uid id순으로 넣게하기
     console.log(uid,name);
-    var checkId_=database.ref('Users/'+name);
+    var checkId_=database.ref('Users/'+uid);
     checkId_.once('value').then(function(snapshot){
+        console.log(snapshot.val(), uid)
         if(uid==snapshot.val().uid){
             return true;
         }
         return false;
-    //for(var i in snapshot.val()){
-        /*var childKey=snapshot.child(`Users/${name}/${uid}`).key;
+    for(var i in snapshot.val()){
+        var childKey=snapshot.child(`Users/${name}/${uid}`).key;
         database.ref(`Users/${name}/${uid}`).once('value').then(function(snapshot){
         toMap(Object.values(snapshot.val())[0],Object.keys(snapshot.val())[0]);//경로 배열에 넣어주고, 이동 경로 표시해주는 함수
         console.log("HELLO");
-                console.log(linePath[linePath.length-1].getLng(),linePath[linePath.length-1].getLat());
-                geocoder.coord2Address(linePath[linePath.length-1].getLng(), linePath[linePath.length-1].getLat(), presentSet);
-                geocoder.coord2Address(linePath[0].getLng(),linePath[0].getLat(),function(result,status){
-                    if(status === kakao.maps.services.Status.OK){
-                        startAddress[0].innerHTML=result[0].address.address_name;
-                        startTime[0].innerHTML=time[0];
-                }
-            });
+        console.log(linePath[linePath.length-1].getLng(),linePath[linePath.length-1].getLat());
+        geocoder.coord2Address(linePath[linePath.length-1].getLng(), linePath[linePath.length-1].getLat(), presentSet);
+        geocoder.coord2Address(linePath[0].getLng(),linePath[0].getLat(),function(result,status){
+        if(status === kakao.maps.services.Status.OK){
+            startAddress[0].innerHTML=result[0].address.address_name;
+            startTime[0].innerHTML=time[0];
+            }
+        });
             
 
-        });*/
-    //    console.log("몇번쨰? :", i);
-   //}
+        });
+        console.log("몇번쨰? :", i);
+   }
 });
 
 
@@ -92,11 +93,13 @@ function checkId(){//name이랑 uid랑 맞나 확인!
 
 function init(){
     if(checkId()==false){
-    window.location.replace("http://www.brillbe.kro.kr:8080/WrongPage.html");
+        window.location.replace("http://www.brillbe.kro.kr:8080/WrongPage.html");
     }
     else if(isMobile()==true&&location.href!=`http://www.brillbe.kro.kr:8080/mobile.html?uid=${uid}&name=${name}`){
-    window.location.replace(`http://www.brillbe.kro.kr:8080/mobile.html?uid=${uid}&name=${name}`);
+        window.location.replace(`http://www.brillbe.kro.kr:8080/mobile.html?uid=${uid}&name=${name}`);
     }
 }
 
 init();
+
+
