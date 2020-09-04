@@ -1,5 +1,5 @@
-const SW_VERSION = 7;
-const APP_PREFIX = "web-skills";
+const SW_VERSION = 1;
+const APP_PREFIX = "algorithms-skills";
 const CACHE_NAME = `${APP_PREFIX}-v${SW_VERSION}`;
 const DEBUG = false;
 const URLS_TO_CACHE = [
@@ -26,19 +26,9 @@ const URLS_TO_CACHE = [
 	"src/atoms/icon.js",
 	"src/atoms/compact-switch.js",
 	"src/atoms/snackbar.js",
-	"src/data/accessibility.js",
-	"src/data/algorithms.js",
-	"src/data/architecture-and-paradigmes.js",
-	"src/data/build-tools.js",
-	"src/data/databases.js",
-	"src/data/design-and-ux.js",
-	"src/data/frameworks-and-libraries.js",
-	"src/data/fundamentals.js",
-	"src/data/modern.js",
-	"src/data/pwa.js",
-	"src/data/team-collaboration.js",
-	"src/data/testing.js",
-	"src/data/web-components.js",
+	"src/data/basic.js",
+	"src/data/advanced.js",
+	"src/data/data.js",
 	"src/styles/shared.js",
 	"src/styles/global.css",
 	"web_modules/web-dialog.js"
