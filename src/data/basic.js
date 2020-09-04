@@ -20,7 +20,7 @@ export const basicCollection = {
 					skills: [
 						{
 							svg_name: "example",
-							name: "Example",
+							name: "Example1",
 							category: 0,
 							description: {
 								text: "언어 및 자료형 별로 스택을 구현한 예제",
@@ -48,7 +48,7 @@ export const basicCollection = {
 					skills: [
 						{
 							svg_name: "example",
-							name: "Example",
+							name: "Example2",
 							category: 0,
 							description: {
 								text: "언어 및 자료형 별로 큐를 구현한 예제",
@@ -76,7 +76,7 @@ export const basicCollection = {
 					skills: [
 						{
 							svg_name: "example",
-							name: "Example",
+							name: "Example3",
 							category: 0,
 							description: {
 								text: "언어 및 자료형 별로 트리를 구현한 예제",
@@ -130,7 +130,7 @@ export const basicCollection = {
 				}, 
 				{
 					svg_name: "example",
-					name: "Example",
+					name: "Example4",
 					category: 0,
 					description: {
 						text: "정렬 알고리즘의 종류별 예제이다. 기본적으로 python의 경우 sort()라는 메소드가 있다.",
@@ -292,7 +292,7 @@ export const basicCollection = {
 							skills: [
 								{
 									svg_name: "example",
-									name: "Example",
+									name: "Example5",
 									category: 0,
 									description:{
 										text: "각 언어별 이진탐색 예제",
@@ -317,7 +317,7 @@ export const basicCollection = {
 							skills: [
 								{
 									svg_name: "example",
-									name: "Example",
+									name: "Example6",
 									category: 0,
 									description:{
 										text: "",
@@ -359,7 +359,7 @@ export const basicCollection = {
 							skills: [
 								{
 									svg_name: "example",
-									name: "Example",
+									name: "Example7",
 									category: 0,
 									description:{
 										text: "각 언어별 예제",
@@ -384,7 +384,7 @@ export const basicCollection = {
 							skills: [
 								{
 									svg_name: "example",
-									name: "Example",
+									name: "Example8",
 									category: 0,
 									description:{
 										text: "각 언어별 예제",

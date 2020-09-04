@@ -1,4 +1,4 @@
-const SW_VERSION = 1;
+const SW_VERSION = 10;
 const APP_PREFIX = "algorithms-skills";
 const CACHE_NAME = `${APP_PREFIX}-v${SW_VERSION}`;
 const DEBUG = false;
@@ -28,7 +28,7 @@ const URLS_TO_CACHE = [
 	"src/atoms/snackbar.js",
 	"src/data/basic.js",
 	"src/data/advanced.js",
-	"src/data/data.js",
+	"src/data/codingtest.js",
 	"src/styles/shared.js",
 	"src/styles/global.css",
 	"web_modules/web-dialog.js"

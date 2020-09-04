@@ -20,7 +20,7 @@ export const advancedCollection = {
 				},
 				{
 					svg_name: "example",
-					name: "Example",
+					name: "Example1",
 					category: 0,
 					description: {
 						text: "각 언어별 해시 예제코드",
@@ -102,7 +102,7 @@ export const advancedCollection = {
 				},
 				{
 					svg_name: "example",
-					name: "Example",
+					name: "Example2",
 					category: 0,
 					description: {
 						text: "각 언어별 DP 예제코드",
@@ -183,7 +183,7 @@ export const advancedCollection = {
 				},
 				{
 					svg_name: "example",
-					name: "Example",
+					name: "Example3",
 					category: 0,
 					description: {
 						text: "각 언어별 greedy 예제코드",
