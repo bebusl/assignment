@@ -1,6 +1,6 @@
 {
-	"name": "web-skills",
-	"description": "A visual overview of useful skills to learn as a web developer",
+	"name": "algorithm-skills",
+	"description": "Algorithm Skills는 알고리즘 개요를 시각적으로 표현한 것입니다.",
 	"type": "module",
 	"license": "MIT",
 	"author": "Andreas Mehlsen",
@@ -45,17 +45,40 @@
 	},
 	"contributors": [
 		{
-			"name": "Andreas Mehlsen",
-			"url": "https://twitter.com/andreasmehlsen",
-			"img": "https://avatars1.githubusercontent.com/u/6267397?s=460&v=4",
+			"name": "bebusl",
+			"url": "https://github.com/bebusl",
+			"img": "https://data.ac-illust.com/data/thumbnails/a7/a74afdc890960a2341644e16b36e9f35_t.jpeg",
+			"info": [
+				"🌴"
+			]
+		},
+		{
+			"name": "ZScomnet",
+			"url": "https://github.com/ZScomnet",
+			"img": "https://avatars1.githubusercontent.com/u/48237348?s=460&v=4",
 			"info": [
 				"🔥"
 			]
 		},
 		{
-			"name": "You?",
-			"img": "https://joeschmoe.io/api/v1/random",
-			"url": "https://github.com/andreasbm/readme/blob/master/CONTRIBUTING.md"
+			"name": "dungbik",
+			"url": "https://github.com/dungbik",
+			"img": "https://avatars2.githubusercontent.com/u/49610681?s=460&u=c796432dbdd2e4d3a6e26c211a668c457f4e1fe0&v=4",
+			"info": [
+				"📖"
+			]
+		}
+	],
+	"badges": [
+		{
+		  	"description": "GitHub license",
+		  	"href": "https://github.com/cbnu-community/algorithm_skills/blob/master/LICENSE.md",
+		  	"url": "https://img.shields.io/badge/license-MIT-blue.svg"
+		},
+		{
+			"description": "PRs Welcome",
+			"href": "https://github.com/cbnu-community/algorithm_skills/wiki",
+			"url": "https://img.shields.io/badge/PRs-welcome-brightgreen.svg"
 		}
 	],
 	"dependencies": {

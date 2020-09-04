@@ -52,38 +52,27 @@ export async function openHelp () {
 			<div tabindex="0"></div>
 			<ws-button id="close" @click="${() => $dialog.close()}" aria-label="Close dialog">✖️</ws-button>
 			
-			<h2>Web Skills FAQ</h2>
+			<h2>Algotithm Skills FAQ</h2>
 
-			<h3>What is Web Skills?</h3>
-			<p>Web Skills is a visual overview of useful skills to learn as a web developer. It is useful for people who just started learning about web development and for people who have been in the field for years and want to learn new things. As a beginner, I would encourage you not to see this website as the definitive list of what you need to know but as an example of what you can learn and where you can start. The skills are arranged in chronological order based on what learning path I recommend you to take but feel free to jump around freely.</p>
+			<h3>Algorithm Skills가 뭔가요?</h3>
+			<p>Algorithm Skills는 알고리즘 개요를 시각적으로 표현한 것입니다.</p>
 
-			<h3>How did you choose the skills?</h3>
-			<p>The skills are derived from a combination of 10 years of experience, a bachelor in software engineering and what I personally find to be the most useful to know on a day-to-day basis. Therefore, you'll notice that it's missing a lot of things. For example, I am not a PHP developer - because of this, PHP is not included. If you were a PHP developer, this overview would probably look a lot different.</p>
+			<h3>이 페이지에 나와있는 알고리즘의 선정 기준은 무엇인가요?</h3>
+			<p>최근 코딩테스트 문제에서 많이 나오고, 활용되는 알고리즘들을 우선적으로 선정했습니다</p>
 
-			<h3>How can I support you?</h3>
-			<p>I am spending my spare time building Web Skills for free because I want to help people get into web development. My motivation comes from people finding Web Skills useful, so if you like the project feel free to support me in any way you like! For example, you are more than welcome to become a <a target="_blank" href="https://github.com/andreasbm/web-skills" rel="noopener" aria-label="Open become stargazer on Github">stargazer on Github</a>, share Web Skills with your friends and followers or create blog articles linking to Web Skills. If you want to, it will absolutely make my day if you <a href="https://www.buymeacoffee.com/AndreasMehlsen" target="_blank" aria-label="Buy coffee">support me with a cup of coffee</a>!</p>
+			<h3>이 프로젝트에 도움을 주려면 어떻게 하나요?</h3>
+			<p> <a target="_blank" href="https://github.com/cbnu-community/algorithm_skills/issues" rel="noopener" aria-label="Open get involved">Github</a> 이 페이지로 가서 철자 수정을 도와주시거나, 오류를 알려주시거나 새로운 기능을 제안해주시면 됩니다! 어떤 도움이든 감사합니다!</p>
 
-			<h3>How can I get involved?</h3>
-			<p>You are welcome to get involved in any way you like. If you want to, you can go to <a target="_blank" href="https://github.com/andreasbm/web-skills/issues" rel="noopener" aria-label="Open get involved">Github</a> and help me fix the spelling, fix issues or suggest some new features. Any involvement is highly appreciated!</p>
 
-			<h3>How can I keep track of what skills I know?</h3>
-			<p>If you scroll to the bottom of the page, you will find a button that says "Sign in with Google". If you click this button and sign in, you will be able to mark skills as completed.</p>
+			<h3>해결한 문제는 풀었다고 표시해두고 싶은데 어떻게 하나요?</h3>
+			<p>페이지 하단에 가면 "구글 로그인"이라는 버튼이 있습니다. 그 버튼을 눌러 로그인 하시면, 문제 앞에 체크박스가 생깁니다. 푼 문제는 체크박스를 클릭해서 풀었다고 표시하면 됩니다!</p>
 
-			<h3>I am overwhelmed! Help me!</h3>
-			<p>I totally understand if you are a bit overwhelmed by the amount of skills on the page – but I can assure you that this overview includes much, much more than most people will ever need to know. My main goal is to provide a visual overview of web development and make people hungry for learning more. One of the things I absolute love about being a developer is learning new skills. I think it is amazing to be in a field where you can do what you do for a lifetime and still learn something new! People cannot be an expert in every skill on this page so try to find what excites you the most and become really good at that.</p>
+			<h3>옆으로 스크롤하는 거 불편한데, 세로로 스크롤 할 수 없나요?</h3>
+			<p>페이지 상단 왼쪽에 보면 컴팩트 모드로 바꿀 수 있는 스위치가 있습니다! 만약 컴팩트 모드를 다른 사람에게 공유하고 싶다면, url 끝에 ?compact 를 추가해서 공유해주세요</p>
 
-			<h3>Why haven't you included XYZ Technology?</h3>
-			<p>The skills are based on what I personally find to be the most useful on a day-to-day basis. If you think something really important is missing, you can always suggest it on <a target="_blank" href="https://github.com/andreasbm/web-skills/issues" rel="noopener" aria-label="Open suggest feature">Github</a>.</p>
-
-			<h3>How can I get rid of the horizontal scrolling?</h3>
-			<p>Many people do not like horizontal scrolling; Personally I really like in this context and wanted to build something truly unique :-) If you want to get rid of the horizontal scrolling, you can toggle back and forth between the wide and compact layout by using the switch at the top of the page. The compact mode is default for mobile users. If you want to share a link for the compact mode you can add <code>?compact</code> to the end of the URL. If you like the wide layout the most you can use the mouse to drag yourself around on the page or press <code>Alt + /</code> to jump to other sections.</p>
-			
-			<h3>What does the "experimental" banner mean?</h3>
-			<p>When a skill is described as experimental, it means that the technology is immature and currently in the process of being added to the Web platform (or considered for addition). Think carefully before you start using experimental technology in any kind of production project. The definition used in Web Skills is based on the excellent definition used on <a target="_blank" href="https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental" rel="noopener">MDN</a>. You are very welcome to open an issue on <a target="_blank" href="https://github.com/andreasbm/web-skills/issues" rel="noopener" aria-label="Open get involved">Github</a> if you see a skill you believe should be marked as "experimental" or have the banner removed.</p>
-
-			<h3>How can I get in contact with you?</h3>
-			<p>Reach out to me on Twitter at <a target="_blank" href="https://twitter.com/AndreasMehlsen" rel="noopener" aria-label="Open Twitter">@AndreasMehlsen</a> or take a look at <a target="_blank" href="https://andreasbm.github.io" rel="noopener" aria-label="Open personal website">my website</a> if you want to learn more about what other projects I'm working on.</p>
-			
+			<h3>제작자와 컨택하려면 어떻게 해야하나요?</h3>
+			<p>brill_be@naver.com로 이메일 주세요! 이 프로젝트에 관해 더 알고싶으면 연락주시면 됩니다.</p>
+	
 			<span id="version">v${APP_VERSION}</span>
 		`, $dialog)
 	});
