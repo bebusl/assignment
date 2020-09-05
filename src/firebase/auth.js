@@ -51,7 +51,7 @@ export class Auth extends HTMLElement {
 			try{
 				return JSON.parse(localStorage.getItem(StorageNames.solvingProblems));
 			} catch (err) {
-				return null;
+				return [];
 			}
 		})();
 
@@ -196,9 +196,11 @@ export class Auth extends HTMLElement {
 	 */
 	async toggleCompleteSkill (skillId) {
 		if (this.hasCompletedSkill(skillId)) {
+			console.log("흔적2");
 			return this.removeCompletedSkill(skillId);
 
 		} else {
+			console.log("흔적3");
 			return this.addCompletedSkill(skillId);
 		}
 	}
@@ -211,7 +213,6 @@ export class Auth extends HTMLElement {
 		if (this.user == null) {
 			return false;
 		}
-
 		await this.db.collection(CollectionNames.users).doc(this.user.uid).set({completedSkills: skills});
 	}
 
