@@ -61,7 +61,7 @@ footer{
 * 컨텐츠 영역은 내부에서 크게 두 영역으로 나뉘는데, 이를 좌 우로 배치하기 위해 .main은 display를 flex로 설정하고 flex-direction을 row로 변경해주었습니다.
 * 푸터에서는 display:flex 에 justify-content:center; align-items:center;값을 주어 푸터의 문구를 푸터영역의 정중앙에 표시하게 했습니다.
   
-### ** 헤더영역 ( nav, banner)**
+### **헤더영역 (nav, banner)**
 ```
 .top-nav{
     background-color: black;
