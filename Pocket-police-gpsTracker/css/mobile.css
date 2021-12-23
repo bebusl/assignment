@@ -1,0 +1,171 @@
+@import url('clear.css');
+
+html,body{
+    height:100vh;
+    width:100vw;
+}
+
+#flex{
+    display:flex;
+    width:100%;
+    margin:0;
+    height:100%;
+    justify-content: center;
+    align-content: center;
+}
+
+#notification{
+    background-color:#F7F7F7;
+    text-align:center;
+    width:120px;
+    padding:10px;
+    border-radius: 10px;
+    box-shadow: gray 3px 3px 10px;
+    margin:10vh auto;
+    position: fixed;
+    
+    z-index:5;
+}
+
+
+#map_wrapper{
+    margin:0;
+    padding:0;
+    width:100vw;
+    height:100vh;
+    z-index:0;
+}
+
+#map{
+    height:70vh;
+    width:100vw;
+    margin-top: 5vh;
+    z-index:0;
+}
+
+
+#nav{
+    display:flex;
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100vw;
+    height:30vh;
+    background-color: #F7F7F7;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#nav > ol{
+    background-color: #F7F7F7;
+    text-align: center;
+    list-style: none;
+    width:100vw;
+    margin:0;
+    padding:0;
+}
+
+.box{
+    height:30px;
+    width:100vw;
+    margin:0 3%;
+    padding:5% 0;
+    border-top:1px solid lightgray;
+}
+.title{
+    background-color:#FFFFFF;
+    border-radius: 30px;
+    box-shadow: lightgray 1px 1px 5px;
+    clear:both;
+    float:left;
+    padding:5px;
+    font-size:18px;
+}
+
+.address{
+    color:rgb(12,34,55);
+    font-size:15px;
+}
+
+.clock{
+    font-size:13px;
+    color:gray;
+}
+
+#share{
+    display: none;
+}
+
+#actionBar{
+    height:53px;
+    width:100vw;
+    margin:0;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-basis: 33vw;
+    font-weight: 600;
+    font-size:18px;
+    z-index:5;
+    position:fixed;
+    top:0;
+    left:0;
+}
+
+#bactionBar{
+    position:fixed;
+    top:0;
+    left:0;
+    background-color: #002060;
+    width:100vw;
+    height:53px;
+    z-index:3;
+}
+
+#set{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index:5;
+}
+
+#shareBox{
+    
+    position:absolute;
+    z-index:10;
+    width:70vw;
+    height:40vh;
+    background-color: white;
+    border-radius: 20px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#shareBox div{
+    text-align:center;
+    font-size: 14px;
+    width:90%;
+    height:10vh;
+    line-height: 10vh;
+}
+
+#shareBtnMobile{
+    cursor:pointer;
+}
+
+
+.off{
+    display:none!important;
+}
